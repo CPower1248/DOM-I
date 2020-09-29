@@ -48,9 +48,13 @@ myA.forEach((item, idx) => {
   myA[idx].style.color = "green";
 })
 
-// const myNav = document.querySelector("nav")
-// myNav.appendChild("-Appended-")
-// myNav.prependChild("-Prepended-")
+const myNav = document.querySelector("nav")
+const appended = document.createElement('a')
+appended.textContent = '-appended-';
+myNav.appendChild(appended)
+const prepended = document.createElement('a')
+prepended.textContent = '-prepended-';
+myNav.prepend(prepended)
 
 let myCtaH1 = document.querySelector(".cta h1")
 myCtaH1.textContent = siteContent.cta.h1;
