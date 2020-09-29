@@ -42,26 +42,29 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Task 2a
-let myNav = document.querySelectorAll("nav a");
-myNav[0].textContent = siteContent.nav["nav-item-1"]
-myNav[1].textContent = siteContent.nav["nav-item-2"]
-myNav[2].textContent = siteContent.nav["nav-item-3"]
-myNav[3].textContent = siteContent.nav["nav-item-4"]
-myNav[4].textContent = siteContent.nav["nav-item-5"]
+const myA = document.querySelectorAll("a")
+myA.forEach((item, idx) => {
+  myA[idx].textContent = siteContent.nav[`nav-item-${idx + 1}`]
+  myA[idx].style.color = "green";
+})
+
+// const myNav = document.querySelector("nav")
+// myNav.appendChild("-Appended-")
+// myNav.prependChild("-Prepended-")
 
 let myCtaH1 = document.querySelector(".cta h1")
 myCtaH1.textContent = siteContent.cta.h1;
 let myCtaButton = document.querySelector(".cta button")
 myCtaButton.textContent = siteContent.cta.button;
 let myCtaImg = document.querySelector(".cta img")
-myCtaImg.src = siteContent.cta["img-src"];
+myCtaImg.src = siteContent.cta["img-src"]
 
 let myMainContentH4 = document.querySelectorAll(".main-content h4")
-myMainContentH4[0].textContent = siteContent["main-content"]["features-h4"];
-myMainContentH4[1].textContent = siteContent["main-content"]["about-h4"];
-myMainContentH4[2].textContent = siteContent["main-content"]["services-h4"];
-myMainContentH4[3].textContent = siteContent["main-content"]["product-h4"];
-myMainContentH4[4].textContent = siteContent["main-content"]["vision-h4"];
+myMainContentH4[0].textContent = siteContent["main-content"]["features-h4"]
+myMainContentH4[1].textContent = siteContent["main-content"]["about-h4"]
+myMainContentH4[2].textContent = siteContent["main-content"]["services-h4"]
+myMainContentH4[3].textContent = siteContent["main-content"]["product-h4"]
+myMainContentH4[4].textContent = siteContent["main-content"]["vision-h4"]
 
 let myMainContentP = document.querySelectorAll(".main-content p")
 myMainContentP[0].textContent = siteContent["main-content"]["features-content"]
@@ -71,10 +74,10 @@ myMainContentP[3].textContent = siteContent["main-content"]["product-content"]
 myMainContentP[4].textContent = siteContent["main-content"]["vision-content"]
 
 let myMainContentImg = document.querySelector(".main-content img")
-myMainContentImg.src = siteContent["main-content"]["middle-img-src"];
+myMainContentImg.src = siteContent["main-content"]["middle-img-src"]
 
 let myContactH4 = document.querySelector(".contact h4")
-myContactH4.textContent = siteContent.contact["contact-h4"];
+myContactH4.textContent = siteContent.contact["contact-h4"]
 let myContactP = document.querySelectorAll(".contact p")
 myContactP[0].textContent = siteContent.contact.address;
 myContactP[1].textContent = siteContent.contact.phone;
